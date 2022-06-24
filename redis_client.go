@@ -2,12 +2,6 @@ package main
 
 import "net"
 
-type RedisClient interface {
-	Connect() (RedisConnection, error)
-	Auth() (RedisConnection, error)
-	Set(key string, value string) RedisResponse
-}
-
 type RedisConfig struct {
 	Address    string
 	Port       int
